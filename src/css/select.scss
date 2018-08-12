@@ -1,0 +1,123 @@
+.yc_select_container{
+	position:relative;
+	width:180px;
+	.input_container{
+		position:relative;
+		display:flex;
+		align-items:center;
+		.arrow{
+		position:absolute;
+			right:10px;
+			//top:50%;
+			//transform:translateY(-50%);
+			height:8px;
+			width:8px;
+			border:1px solid #888888;
+			border-right-color:transparent;
+			border-bottom-color:transparent;
+			transform: rotate(45deg);
+			transition:.6s;
+			transform-origin:50% 50%;
+		}
+		.yc_select_input{
+			outline:none;
+			-webkit-appearance:none;
+			width:180px;
+			height:30px;
+			padding:0 10px;
+			border-radius:5px;
+			cursor:pointer;
+			border:1px solid #888888;
+			font-size: 16px;
+			position:relative;
+			display:block;
+			&:focus{
+				border-color:#409eff;
+			}
+		}
+	}
+	.yc_select{
+		position:absolute;
+		top:30px;
+		left:0;
+		z-index:9999;
+		max-height:0px;
+		transition: .3s;
+		overflow:hidden;
+		width:100%;
+		background:#fff;
+		.yc_select_arrow{
+			position:relative;
+			display:block;
+			clear:both;
+			height:10px;
+			width:10px;
+			top:3px;
+			left:20px;
+			background:#fff;
+			border:1px solid #409eff;
+			border-right-color:transparent;
+			border-bottom-color:transparent;
+			z-index:10000;
+			transform: rotate(45deg);
+		}
+		.yc_select_main{
+			//display:none;
+			position:relative;
+			margin-top:-3px;
+			//box-shadow:0 2px 12px 0 rgba(0,0,0,.1);
+			border-radius:5px;
+			border:1px solid #409eff;
+			overflow:hidden;
+			.yc_select_scrollBar_right{
+				position:absolute;
+				right:3px;
+				top:2px;
+				height:30px;
+				background:#f1f1f1;
+				width:3px;
+				border-radius:3px;
+			}
+			.yc_select_ul{
+				margin-top:10px;
+				background-color:#fff;
+				min-width:180px;
+				//max-height:180px;
+				overflow:scroll;
+				//padding:10px 5px;
+				height:180px;
+				margin-right:-17px;
+				margin-bottom:-17px;
+				overflow-x:hidden;
+				-webkit-overflow-scrolling:touch;
+				//transition: max-height 1s;
+				ul{
+					//height:100%;
+					//overflow:scroll;
+					li{
+						list-style:none;
+						width:100%;
+						color:#333;
+						padding:5px 10px;
+						cursor:pointer;
+						font-size: 16px;
+						&:hover{
+							background-color:#f5f7fa;
+							//color:#fff
+						}	
+					}
+					.active{
+						color:#409eff;
+						font-weight: bold;
+					}
+				}
+				// &::-webkit-scrollbar{
+				// 	background:red;
+				// }
+				// &::-webkit-scrollbar-corner{
+				// 	background:red;
+				// }
+			}
+		}
+	}
+}
